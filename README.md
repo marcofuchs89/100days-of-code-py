@@ -1,6 +1,6 @@
 # 100days-of-code-py
 
-This repository helps me to keep track of my working files which are needed for the 100 Days of Code (Python) Challenge/Course by Dr. Angela Yu on her Website [https://100daysofpython.dev/].
+This repository helps me to keep track of my working files which are needed for the 100 Days of Code (Python) Challenge/Course by Dr. Angela Yu on her [Website](https://100daysofpython.dev/).
 
 ## Outline
 
