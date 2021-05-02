@@ -14,9 +14,11 @@ with just a few easy steps: so let's get started ;)
 """
 )
 city_name = input("What's the name of the city you grew up in?\n")
+print("")
 pet_name = input(
     "How was your last pet called / What name would you call your future pet?\n"
 )
+print("")
 print("===================================")
 print(
     f"""Your new awesome band-name:
