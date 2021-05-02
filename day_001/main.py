@@ -38,7 +38,7 @@ b = input("b: ")
 # 🚨 Don't change the code above 👆
 
 ####################################
-#Write your code below this line 👇
+# Write your code below this line 👇
 
 # Using one switch-variable
 x = a
@@ -50,9 +50,17 @@ b = x
 # x, y = a, b
 # b, a = x, y
 
-#Write your code above this line 👆
+# Write your code above this line 👆
 ####################################
 
 # 🚨 Don't change the code below 👇
 print("a: " + a)
 print("b: " + b)
+
+# Variable Namings
+# Good practices for Variable Namings:
+# Use Snake_Case for variable names with multiple words
+# e.g. user_name, user_password, date_of_birth, side_length ...
+# Numbers can be appended to variable names, but never prefixed
+# Good: number1, number2
+# Bad: 1number, 2number
