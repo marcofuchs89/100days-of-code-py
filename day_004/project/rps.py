@@ -47,23 +47,23 @@ playable_hands = [rock, paper, scissors]
 if __name__ == '__main__':
     # Welcome and picking the hands
     print("Welcome to pRPS - Pythonic Rock, Paper, Scissors!")
-    human = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
-    computer = randint(0, 2)
+    human_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+    computer_choice = randint(0, 2)
 
-    if human not in (0, 1, 2):
+    if human_choice not in (0, 1, 2):
         print("Wrong input ... you have to start over")
     else:
         # Printing the made choices
         print("\nYour choice:")
-        print(playable_hands[human])
+        print(playable_hands[human_choice])
 
         print("\nComputers choice:")
-        print(playable_hands[computer])
+        print(playable_hands[computer_choice])
 
         # Determining win, loss or draw
-        if game_board[human][computer] == 1:
+        if game_board[human_choice][computer_choice] == 1:
             print("You win. Congratulations!")
-        elif game_board[human][computer] == -1:
+        elif game_board[human_choice][computer_choice] == -1:
             print("You lose. Sorry!")
-        elif game_board[human][computer] == 0:
+        elif game_board[human_choice][computer_choice] == 0:
             print("It's a draw. Next round!")
