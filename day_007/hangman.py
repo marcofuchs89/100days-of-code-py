@@ -3,10 +3,11 @@
 import random
 
 from hangman_art import stages, logo
-from hangman_words import word_list
+from hangman_words import word_list_en, word_list_de
 
 # Update the word list to use the 'word_list' from hangman_words.py
-chosen_word = random.choice(word_list)
+chosen_word = random.choice(word_list_de)
+chosen_word = chosen_word.lower()
 word_length = len(chosen_word)
 
 end_of_game = False
@@ -15,7 +16,7 @@ lives = 6
 # Import the logo from hangman_art.py and print it at the start of the game.
 print(logo + "\n")
 # Testing code
-print(f"Pssst, the solution is {chosen_word}.")
+# print(f"Pssst, the solution is {chosen_word}.")
 
 # Create blanks
 display = []
@@ -45,6 +46,7 @@ while not end_of_game:
         lives -= 1
         if lives == 0:
             end_of_game = True
+            print(f"The word we we're looking for: {chosen_word}")
             print("You lose.")
 
     # Join all the elements in the list and turn it into a String.
