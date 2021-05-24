@@ -48,11 +48,14 @@ if __name__ == "__main__":
     print(logo)
     run_again = True
     while run_again is True:
-        direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+        direction = input(
+            """Type 'encode' to encrypt, \
+             type 'decode' to decrypt:\n"""
+        )
         text = input("Type your message:\n").lower()
         shift = int(input("Type the shift number:\n"))
 
         caesar(message=text, shift_amount=shift, cipher_method=direction)
         start_over = input("Do you want to start over? (Yes/No)").lower()
-        if start_over == 'no':
+        if start_over == "no":
             run_again = False
