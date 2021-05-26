@@ -1,4 +1,5 @@
-from typing import Callable, Union, Dict
+from typing import Callable, Dict, Union
+
 from art import logo
 
 
@@ -37,22 +38,32 @@ operations: Dict[str, Callable] = {
     "/": divide,
 }
 
-# Program Start
-print(logo)
-finished_calculation = False
 
-num1 = int(input("What's the first number?: "))
+def calculator():
+    print(logo)
 
-for symbol in operations:
-    print(symbol)
+    num1 = float(input("What's the first number?: "))
 
-while not finished_calculation:
-    operation_symbol = input("Pick an operation: ")
-    num2 = int(input("What's the next number?: "))
-    answer = operations[operation_symbol](num1, num2)
-    print(f"{num1} {operation_symbol} {num2} = {answer}")
-    another_calculation = input(f"Type 'y' to continue calculating with {answer}, or type 'n' to exit: ").lower()
-    if another_calculation == 'y':
-        num1 = answer
-    else:
-        finished_calculation = True
+    for symbol in operations:
+        print(symbol)
+
+    should_continue = True
+
+    while should_continue:
+        operation_symbol = input("Pick an operation: ")
+        num2 = float(input("What's the next number?: "))
+        answer = operations[operation_symbol](num1, num2)
+        print(f"{num1} {operation_symbol} {num2} = {answer}")
+        another_calculation = input(
+            f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculation, or type 'q' to "
+            f"exit: ").lower()
+        if another_calculation == 'y':
+            num1 = answer
+        elif another_calculation == 'n':
+            # should_continue = False
+            calculator()
+        else:
+            exit()
+
+
+calculator()
